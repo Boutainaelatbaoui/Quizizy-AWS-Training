@@ -2,22 +2,32 @@
 
 $primary-color: #0f084b;
 $secondary-color: #ffc300;
-$tertiary-color: #0d0221;
+$tertiary-color: #001d3d;
 $text-color: white;
 $aws-clor: #ffd60a;
 $font-logo: 'Mochiy Pop One', cursive;
 $font-text: 'Poppins', sans-serif;
+$text-size-button: 19px;
 $important-text: bold;
-$margin-top: 30px;
+$margin-top: 29px;
 $logo-size: 70px;
+$padding-input: 15px;
 
 @mixin logo {
     color: $secondary-color;
     font-family: $font-logo;
     font-size: $logo-size;
     font-weight: $important-text;
-    display: flex;
-    justify-content: center;
+}
+
+@mixin button {
+    color: $primary-color;
+    font-family: $font-text;
+    font-size: $text-size-button;
+    font-weight: $important-text;
+    min-width: 200px;
+    min-height: 40px;
+    border-radius: 20px;
 }
 
 *{
@@ -32,6 +42,8 @@ body{
 
 .text-logo{
     @include logo;
+    display: flex;
+    justify-content: center;
 }
 
 .welcome-text{
@@ -46,13 +58,56 @@ body{
 }
 
 .container{
-    width: 80%;
+    width: 70%;
     height: 70vh;
-    margin: auto;
+    margin: 0 auto;
     background-color: $primary-color;
     display: flex;
     justify-content: center;
     margin-top: 100px;
     border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+.first-slide{
+    margin-top: 50px;
+}
+
+.input-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.username-input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: 450px;
+    min-height: 45px;
+    padding: $padding-input;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    &::placeholder{
+        font-family: $font-text;
+        font-size: $text-size-button;
+        text-align: center;
+    }
+
+    &:focus{
+        border: 6px solid $secondary-color;
+        border-radius: 20px;
+    }
+}
+
+.btn{
+    @include button;
+    background-color: $aws-clor;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    &:hover{
+        cursor: pointer;
+    }
 }
 

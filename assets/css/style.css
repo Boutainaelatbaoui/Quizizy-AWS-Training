@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #0d0221;
+  background-color: #001d3d;
 }
 
 .text-logo {
@@ -26,7 +26,7 @@ body {
 .welcome-text {
   color: white;
   font-family: "Poppins", sans-serif;
-  margin-top: 30px;
+  margin-top: 29px;
 }
 
 .aws {
@@ -35,9 +35,9 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 70%;
   height: 70vh;
-  margin: auto;
+  margin: 0 auto;
   background-color: #0f084b;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,4 +47,82 @@ body {
           justify-content: center;
   margin-top: 100px;
   border-radius: 50px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+          box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.first-slide {
+  margin-top: 50px;
+}
+
+.input-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.username-input {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-width: 450px;
+  min-height: 45px;
+  padding: 15px;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.username-input::-webkit-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  text-align: center;
+}
+.username-input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  text-align: center;
+}
+.username-input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  text-align: center;
+}
+.username-input::-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  text-align: center;
+}
+.username-input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  text-align: center;
+}
+.username-input:focus {
+  border: 6px solid #ffc300;
+  border-radius: 20px;
+}
+
+.btn {
+  color: #0f084b;
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  min-width: 200px;
+  min-height: 40px;
+  border-radius: 20px;
+  background-color: #ffd60a;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.btn:hover {
+  cursor: pointer;
 }
