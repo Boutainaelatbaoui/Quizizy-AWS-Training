@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Frijole&family=Merienda+One&family=Mochiy+Pop+One&family=Niconne&family=Pacifico&family=Poppins&family=Shrikhand&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d0221;
+}
+
+.text-logo {
+  color: #ffc300;
+  font-family: "Mochiy Pop One", cursive;
+  font-size: 70px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.welcome-text {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin-top: 30px;
+}
+
+.aws {
+  color: #ffd60a;
+  font-weight: bold;
+}
+
+.container {
+  width: 80%;
+  height: 70vh;
+  margin: auto;
+  background-color: #0f084b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 100px;
+  border-radius: 50px;
+}

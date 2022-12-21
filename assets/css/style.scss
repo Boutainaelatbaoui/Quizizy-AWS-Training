@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Frijole&family=Merienda+One&family=Mochiy+Pop+One&family=Niconne&family=Pacifico&family=Poppins&family=Shrikhand&display=swap');
+
+$primary-color: #0f084b;
+$secondary-color: #ffc300;
+$tertiary-color: #0d0221;
+$text-color: white;
+$aws-clor: #ffd60a;
+$font-logo: 'Mochiy Pop One', cursive;
+$font-text: 'Poppins', sans-serif;
+$important-text: bold;
+$margin-top: 30px;
+$logo-size: 70px;
+
+@mixin logo {
+    color: $secondary-color;
+    font-family: $font-logo;
+    font-size: $logo-size;
+    font-weight: $important-text;
+    display: flex;
+    justify-content: center;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $tertiary-color;
+}
+
+.text-logo{
+    @include logo;
+}
+
+.welcome-text{
+    color: $text-color;
+    font-family: $font-text;
+    margin-top: $margin-top;
+}
+
+.aws{
+    color: $aws-clor;
+    font-weight: $important-text;
+}
+
+.container{
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    border-radius: 50px;
+}
+
