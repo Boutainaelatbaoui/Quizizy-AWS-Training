@@ -9,7 +9,7 @@ $font-logo: 'Mochiy Pop One', cursive;
 $font-text: 'Poppins', sans-serif;
 $text-size-button: 19px;
 $important-text: bold;
-$margin-top: 29px;
+$margin-top: 33px;
 $logo-size: 70px;
 $padding-input: 15px;
 
@@ -30,6 +30,18 @@ $padding-input: 15px;
     border-radius: 20px;
 }
 
+@mixin breakpoints($point){
+    @if $point == mobile {
+        @media (max-width: 767px) {
+            @content;
+        }
+    } @else if $point == tablet {
+        @media (min-width: 768px) and (max-width: 991px){
+            @content;
+        }
+    }
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -44,12 +56,19 @@ body{
     @include logo;
     display: flex;
     justify-content: center;
+    @include breakpoints(mobile){
+        font-size: 35px;
+    }
 }
 
 .welcome-text{
     color: $text-color;
     font-family: $font-text;
     margin-top: $margin-top;
+    text-align: center;
+    @include breakpoints(mobile){
+        font-size: 17px;
+    }
 }
 
 .aws{
@@ -59,18 +78,26 @@ body{
 
 .container{
     width: 70%;
-    height: 70vh;
     margin: 0 auto;
     background-color: $primary-color;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 130px;
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-
+    @include breakpoints(tablet){
+        width: 90%;
+    }
+    @include breakpoints(mobile){
+        width: 90%;
+        height: 70vh;
+    }
 }
 .first-slide{
     margin-top: 50px;
+    @include breakpoints(mobile){
+        margin-top: 80px;
+    }
 }
 
 .input-btn{
@@ -93,21 +120,38 @@ body{
         font-family: $font-text;
         font-size: $text-size-button;
         text-align: center;
+        @include breakpoints(mobile){
+            font-size: 15px;
+        }
     }
 
     &:focus{
         border: 6px solid $secondary-color;
         border-radius: 20px;
     }
+    @include breakpoints(mobile){
+        min-width: 250px;
+        min-height: 35px;
+        margin-top: 28px;
+        margin-bottom: 10px;
+    }
 }
 
 .btn{
     @include button;
+    margin-bottom: 100px;
     background-color: $aws-clor;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
     &:hover{
         cursor: pointer;
+        background-color: #f8961e;
+        transition: 0.7s;
+    }
+    @include breakpoints(mobile){
+        min-width: 100px;
+        min-height: 35px;
+        font-size: 15px;
     }
 }
 
