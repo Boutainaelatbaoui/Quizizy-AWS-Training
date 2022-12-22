@@ -12,6 +12,7 @@ $important-text: bold;
 $margin-top: 33px;
 $logo-size: 70px;
 $padding-input: 15px;
+$box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
 @mixin logo {
     color: $secondary-color;
@@ -81,8 +82,9 @@ body{
     margin: 0 auto;
     background-color: $primary-color;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 130px;
+    margin-top: 150px;
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     @include breakpoints(tablet){
@@ -94,7 +96,7 @@ body{
     }
 }
 .first-slide{
-    margin-top: 50px;
+    margin-top: 10px;
     @include breakpoints(mobile){
         margin-top: 80px;
     }
@@ -114,7 +116,7 @@ body{
     min-height: 45px;
     padding: $padding-input;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: $box-shadow;
 
     &::placeholder{
         font-family: $font-text;
@@ -141,7 +143,7 @@ body{
     @include button;
     margin-bottom: 100px;
     background-color: $aws-clor;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: $box-shadow;
 
     &:hover{
         cursor: pointer;
@@ -155,3 +157,85 @@ body{
     }
 }
 
+.quiz-app{
+    display: none;
+    color: $text-color;
+    justify-content: space-between;
+    align-self: center;
+    margin: 25px 150px 0px ;
+    font-family: $font-text;
+    font-weight: $important-text;
+}
+
+.quiz-info{
+    display: none;
+    font-family: $font-text;
+    text-align: center;
+}
+
+.quiz-question{
+    margin: 70px 30px 25px;
+    color: $primary-color;
+    background-color: $aws-clor;
+    font-weight: $important-text;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+}
+
+.answers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+@for $i from 1 through 4 {
+    #answer-#{$i}{
+        min-width: 450px;
+        min-height: 65px;
+        margin-bottom: 15px;
+        border-radius: 15px;
+        font-weight: $important-text;
+        font-family: $font-text;
+        font-size: 18px;
+        font-weight: $important-text;
+        color: $primary-color;
+        box-shadow: $box-shadow;
+
+        &:hover{
+            cursor: pointer;
+            background-color: #ffbf69;
+            transition: 0.7s;
+        }
+    }
+    @if $i%2 != 0{
+        .answer-#{$i}{
+            margin-right: 25px;
+        }
+    }
+}
+
+.next-btn{
+    @include button;
+    display: none;
+    text-align: center;
+    margin: auto;
+    background-color: $aws-clor;
+    box-shadow: $box-shadow;
+    margin-bottom: 70px;
+    min-height: 60px;
+    font-size: 23px;
+
+    &:hover{
+        cursor: pointer;
+        background-color: #f8961e;
+        transition: 0.7s;
+    }
+}
+
+#chevron{
+    display: none;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 10px;
+}

@@ -12,17 +12,37 @@
     <!-- ================== END core-css ================== -->
 </head>
 <body>
-    <div class="container">
-        <div class="first-slide">
+    <div class="quiz-app" id="quiz-app">
+        <h3 class="username">Hello Boutaina</h3>
+        <h3 class="timer">02 : 10</h3>
+        <h3 class="progress">10 Questions</h3>
+    </div>
+    <div class="container" id="container">
+        <div class="first-slide" id="first-slide">
             <span class="text-logo">Quizizy</span>
             <h2 class="welcome-text">Welcome to <span class="aws">AWS Cloud</span> Practitioner Knowledge Quiz</h2>
             <div class="input-btn">
                 <form>
                     <input type="text" placeholder="Please Enter Your Name" id="username" class="username-input" name="username">
                 </form>
-                <button class="btn">Start</button>
+                <button class="btn" id="start">Start</button>
             </div>
         </div>
+        <div class="quiz-info" id="quiz-info">
+            <h2 class="quiz-question">Why is AWS more economical than traditional data centers for applications with varying compute workloads?</h2>
+            <div class="answers" id="answers">
+                <div>
+                    <button class="answer" id="answer-1">AWS Storage Gateway</button>
+                    <button class="answer" id="answer-2">AWS Database Migration Service (AWS DMS)</button>
+                </div>
+                <div>
+                    <button class="answer" id="answer-3">Amazon EC2</button>
+                    <button class="answer" id="answer-4">Amazon AppStream 2.0</button>
+                </div>
+            </div>
+            <button class="next-btn" id="next">Next <i class="bi bi-chevron-double-right" id="chevron"></i></button>
+        </div>
     </div>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
