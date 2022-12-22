@@ -22,11 +22,22 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (max-width: 767px) {
+  .text-logo {
+    font-size: 35px;
+  }
+}
 
 .welcome-text {
   color: white;
   font-family: "Poppins", sans-serif;
-  margin-top: 29px;
+  margin-top: 33px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .welcome-text {
+    font-size: 17px;
+  }
 }
 
 .aws {
@@ -36,7 +47,6 @@ body {
 
 .container {
   width: 70%;
-  height: 70vh;
   margin: 0 auto;
   background-color: #0f084b;
   display: -webkit-box;
@@ -45,14 +55,30 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 100px;
+  margin-top: 130px;
   border-radius: 50px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
           box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+    height: 70vh;
+  }
+}
 
 .first-slide {
   margin-top: 50px;
+}
+@media (max-width: 767px) {
+  .first-slide {
+    margin-top: 80px;
+  }
 }
 
 .input-btn {
@@ -106,9 +132,34 @@ body {
   font-size: 19px;
   text-align: center;
 }
+@media (max-width: 767px) {
+  .username-input::-webkit-input-placeholder {
+    font-size: 15px;
+  }
+  .username-input::-moz-placeholder {
+    font-size: 15px;
+  }
+  .username-input:-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .username-input::-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .username-input::placeholder {
+    font-size: 15px;
+  }
+}
 .username-input:focus {
   border: 6px solid #ffc300;
   border-radius: 20px;
+}
+@media (max-width: 767px) {
+  .username-input {
+    min-width: 250px;
+    min-height: 35px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+  }
 }
 
 .btn {
@@ -119,10 +170,21 @@ body {
   min-width: 200px;
   min-height: 40px;
   border-radius: 20px;
+  margin-bottom: 100px;
   background-color: #ffd60a;
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
           box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .btn:hover {
   cursor: pointer;
+  background-color: #f8961e;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+@media (max-width: 767px) {
+  .btn {
+    min-width: 100px;
+    min-height: 35px;
+    font-size: 15px;
+  }
 }
