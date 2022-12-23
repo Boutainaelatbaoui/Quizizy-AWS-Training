@@ -3,6 +3,8 @@
 $primary-color: #0f084b;
 $secondary-color: #ffc300;
 $tertiary-color: #001d3d;
+$correct-color: #548c2f;
+$wrong-answer: #ad2e24;
 $text-color: white;
 $aws-clor: #ffd60a;
 $font-logo: 'Mochiy Pop One', cursive;
@@ -89,10 +91,12 @@ body{
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     @include breakpoints(tablet){
         width: 90%;
+        margin-bottom: 90px;
     }
     @include breakpoints(mobile){
         width: 90%;
-        height: 70vh;
+        height: 80%;
+        margin-bottom: 90px;
     }
 }
 .first-slide{
@@ -165,6 +169,17 @@ body{
     margin: 25px 150px 0px ;
     font-family: $font-text;
     font-weight: $important-text;
+    @include breakpoints(tablet){
+        font-size: 18px;
+        margin-left: 40px;
+        flex-direction: column;
+    }
+    @include breakpoints(mobile){
+        font-size: 14px;
+        margin-left: 30px;
+        flex-direction: column;
+        gap: 5px;
+    }
 }
 
 .quiz-info{
@@ -175,11 +190,18 @@ body{
 
 .quiz-question{
     margin: 70px 30px 25px;
+    padding: 8px 10px;
     color: $primary-color;
     background-color: $aws-clor;
     font-weight: $important-text;
     border-radius: 20px;
     box-shadow: $box-shadow;
+    @include breakpoints(tablet){
+        font-size: 18px;
+    }
+    @include breakpoints(mobile){
+        font-size: 15px;
+    }
 }
 
 .answers{
@@ -191,7 +213,7 @@ body{
 
 @for $i from 1 through 4 {
     #answer-#{$i}{
-        min-width: 450px;
+        min-width: 500px;
         min-height: 65px;
         margin-bottom: 15px;
         border-radius: 15px;
@@ -201,6 +223,16 @@ body{
         font-weight: $important-text;
         color: $primary-color;
         box-shadow: $box-shadow;
+
+        @include breakpoints(tablet){
+            min-width: 450px;
+            min-height: 55px;
+        }
+        @include breakpoints(mobile){
+            font-size: 14px;
+            min-width: 250px;
+            min-height: 55px;
+        }
 
         &:hover{
             cursor: pointer;
@@ -226,6 +258,15 @@ body{
     min-height: 60px;
     font-size: 23px;
 
+    @include breakpoints(tablet){
+        min-height: 59px;
+        font-size: 20px;
+    }
+    @include breakpoints(mobile){
+        min-height: 45px;
+        font-size: 18px;
+    }
+
     &:hover{
         cursor: pointer;
         background-color: #f8961e;
@@ -238,4 +279,16 @@ body{
     font-size: 20px;
     font-weight: bolder;
     margin-left: 10px;
+    @include breakpoints(mobile){
+        font-size: 18px;
+    }
+}
+
+#empty-input{
+    color: $text-color;
+    font-size: 19px;
+    font-family: $font-text;
+    font-weight: $important-text;
+    text-align: center;
+    margin-bottom: 15px;
 }

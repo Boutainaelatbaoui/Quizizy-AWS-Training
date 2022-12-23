@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Frijole&family=Merienda+One&family=Mochiy+Pop+One&family=Niconne&family=Pacifico&family=Poppins&family=Shrikhand&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -15,12 +14,8 @@ body {
   font-family: "Mochiy Pop One", cursive;
   font-size: 70px;
   font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 @media (max-width: 767px) {
   .text-logo {
@@ -49,30 +44,24 @@ body {
   width: 70%;
   margin: 0 auto;
   background-color: #0f084b;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 150px;
   border-radius: 50px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-          box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container {
     width: 90%;
+    margin-bottom: 90px;
   }
 }
 @media (max-width: 767px) {
   .container {
     width: 90%;
-    height: 70vh;
+    height: 80%;
+    margin-bottom: 90px;
   }
 }
 
@@ -86,19 +75,10 @@ body {
 }
 
 .input-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .username-input {
@@ -108,13 +88,7 @@ body {
   min-height: 45px;
   padding: 15px;
   border-radius: 20px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-.username-input::-webkit-input-placeholder {
-  font-family: "Poppins", sans-serif;
-  font-size: 19px;
-  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .username-input::-moz-placeholder {
   font-family: "Poppins", sans-serif;
@@ -126,27 +100,16 @@ body {
   font-size: 19px;
   text-align: center;
 }
-.username-input::-ms-input-placeholder {
-  font-family: "Poppins", sans-serif;
-  font-size: 19px;
-  text-align: center;
-}
 .username-input::placeholder {
   font-family: "Poppins", sans-serif;
   font-size: 19px;
   text-align: center;
 }
 @media (max-width: 767px) {
-  .username-input::-webkit-input-placeholder {
-    font-size: 15px;
-  }
   .username-input::-moz-placeholder {
     font-size: 15px;
   }
   .username-input:-ms-input-placeholder {
-    font-size: 15px;
-  }
-  .username-input::-ms-input-placeholder {
     font-size: 15px;
   }
   .username-input::placeholder {
@@ -176,13 +139,11 @@ body {
   border-radius: 20px;
   margin-bottom: 100px;
   background-color: #ffd60a;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .btn:hover {
   cursor: pointer;
   background-color: #f8961e;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 @media (max-width: 767px) {
@@ -196,15 +157,26 @@ body {
 .quiz-app {
   display: none;
   color: white;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  justify-content: space-between;
+  align-self: center;
   margin: 25px 150px 0px;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .quiz-app {
+    font-size: 18px;
+    margin-left: 40px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .quiz-app {
+    font-size: 14px;
+    margin-left: 30px;
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 
 .quiz-info {
@@ -215,30 +187,33 @@ body {
 
 .quiz-question {
   margin: 70px 30px 25px;
+  padding: 8px 10px;
   color: #0f084b;
   background-color: #ffd60a;
   font-weight: bold;
   border-radius: 20px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .quiz-question {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .quiz-question {
+    font-size: 15px;
+  }
 }
 
 .answers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 70px;
 }
 
 #answer-1 {
-  min-width: 450px;
+  min-width: 500px;
   min-height: 65px;
   margin-bottom: 15px;
   border-radius: 15px;
@@ -247,13 +222,24 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: #0f084b;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #answer-1 {
+    min-width: 450px;
+    min-height: 55px;
+  }
+}
+@media (max-width: 767px) {
+  #answer-1 {
+    font-size: 14px;
+    min-width: 250px;
+    min-height: 55px;
+  }
 }
 #answer-1:hover {
   cursor: pointer;
   background-color: #ffbf69;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
@@ -262,7 +248,7 @@ body {
 }
 
 #answer-2 {
-  min-width: 450px;
+  min-width: 500px;
   min-height: 65px;
   margin-bottom: 15px;
   border-radius: 15px;
@@ -271,18 +257,29 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: #0f084b;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #answer-2 {
+    min-width: 450px;
+    min-height: 55px;
+  }
+}
+@media (max-width: 767px) {
+  #answer-2 {
+    font-size: 14px;
+    min-width: 250px;
+    min-height: 55px;
+  }
 }
 #answer-2:hover {
   cursor: pointer;
   background-color: #ffbf69;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
 #answer-3 {
-  min-width: 450px;
+  min-width: 500px;
   min-height: 65px;
   margin-bottom: 15px;
   border-radius: 15px;
@@ -291,13 +288,24 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: #0f084b;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #answer-3 {
+    min-width: 450px;
+    min-height: 55px;
+  }
+}
+@media (max-width: 767px) {
+  #answer-3 {
+    font-size: 14px;
+    min-width: 250px;
+    min-height: 55px;
+  }
 }
 #answer-3:hover {
   cursor: pointer;
   background-color: #ffbf69;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
@@ -306,7 +314,7 @@ body {
 }
 
 #answer-4 {
-  min-width: 450px;
+  min-width: 500px;
   min-height: 65px;
   margin-bottom: 15px;
   border-radius: 15px;
@@ -315,13 +323,24 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: #0f084b;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #answer-4 {
+    min-width: 450px;
+    min-height: 55px;
+  }
+}
+@media (max-width: 767px) {
+  #answer-4 {
+    font-size: 14px;
+    min-width: 250px;
+    min-height: 55px;
+  }
 }
 #answer-4:hover {
   cursor: pointer;
   background-color: #ffbf69;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
@@ -337,16 +356,26 @@ body {
   text-align: center;
   margin: auto;
   background-color: #ffd60a;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   margin-bottom: 70px;
   min-height: 60px;
   font-size: 23px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .next-btn {
+    min-height: 59px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .next-btn {
+    min-height: 45px;
+    font-size: 18px;
+  }
+}
 .next-btn:hover {
   cursor: pointer;
   background-color: #f8961e;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
@@ -356,3 +385,17 @@ body {
   font-weight: bolder;
   margin-left: 10px;
 }
+@media (max-width: 767px) {
+  #chevron {
+    font-size: 18px;
+  }
+}
+
+#empty-input {
+  color: white;
+  font-size: 19px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}/*# sourceMappingURL=style.css.map */

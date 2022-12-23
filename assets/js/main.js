@@ -13,10 +13,18 @@ answer_4.addEventListener("click", nextQuiz);
 function startQuiz(e){
     e.preventDefault();
 
-    document.getElementById("first-slide").style.display  = "none";
-    document.getElementById("quiz-app").style.display     = "flex";
-    document.getElementById("quiz-info").style.display    = "block";
-    document.getElementById("container").style.marginTop  = "80px";
+    let username = document.getElementById("username-input").value;
+    document.getElementById("username").innerText = `Hello ${username}`;
+    
+    if (username != "") {
+        document.getElementById("first-slide").style.display  = "none";
+        document.getElementById("quiz-app").style.display     = "flex";
+        document.getElementById("quiz-info").style.display    = "block";
+        document.getElementById("container").style.marginTop  = "80px";
+    }
+    else{
+        document.getElementById("empty-input").innerText = "Please Enter a name to start the quizz";
+    }
 }
 
 function nextQuiz(e){

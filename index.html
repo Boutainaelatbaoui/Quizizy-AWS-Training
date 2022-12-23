@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="quiz-app" id="quiz-app">
-        <h3 class="username">Hello Boutaina</h3>
+        <h3 class="username" id="username"></h3>
         <h3 class="timer">02 : 10</h3>
         <h3 class="progress">10 Questions</h3>
     </div>
@@ -23,7 +23,8 @@
             <h2 class="welcome-text">Welcome to <span class="aws">AWS Cloud</span> Practitioner Knowledge Quiz</h2>
             <div class="input-btn">
                 <form>
-                    <input type="text" placeholder="Please Enter Your Name" id="username" class="username-input" name="username">
+                    <input type="text" placeholder="Please Enter Your Name" id="username-input" class="username-input" name="username">
+                    <p id="empty-input"></p>
                 </form>
                 <button class="btn" id="start">Start</button>
             </div>
@@ -43,6 +44,7 @@
             <button class="next-btn" id="next">Next <i class="bi bi-chevron-double-right" id="chevron"></i></button>
         </div>
     </div>
+    <script src="assets/js/data.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
