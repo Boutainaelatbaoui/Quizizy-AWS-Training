@@ -10,7 +10,7 @@ let answer     = document.querySelector("answer");
 let start = document.getElementById("start");
 let next = document.getElementById("next");
 
-let index = 0;
+let index = Math.floor(Math.random() * questions.length);
 
 //Total points
 let correct = 0;
@@ -74,7 +74,8 @@ function loadData(){
         answer_2.innerText   = questions[index].answer2;
         answer_3.innerText   = questions[index].answer3;
         answer_4.innerText   = questions[index].answer4;
-        index++;
+        index = Math.floor(Math.random() * questions.length);
+        console.log(index);
     }
 }
 
