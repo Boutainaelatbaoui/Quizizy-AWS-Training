@@ -3,8 +3,8 @@
 $primary-color: #0f084b;
 $secondary-color: #ffc300;
 $tertiary-color: #001d3d;
-$correct-color: #548c2f;
-$wrong-answer: #ad2e24;
+$correct-color: #27a300;
+$wrong-answer: #ba3f1d;
 $text-color: white;
 $aws-clor: #ffd60a;
 $font-logo: 'Mochiy Pop One', cursive;
@@ -247,6 +247,16 @@ body{
     }
 }
 
+.correct{
+    background-color: $correct-color !important;
+    color: $text-color !important;
+}
+
+.wrong{
+    background-color: $wrong-answer !important;
+    color: $text-color !important;
+}
+
 .next-btn{
     @include button;
     display: none;
@@ -292,3 +302,4 @@ body{
     text-align: center;
     margin-bottom: 15px;
 }
+
