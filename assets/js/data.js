@@ -47,64 +47,76 @@ const questions = [
         "response"    : 4,
         "explanation" : "Amazon VPC lets users provision a logically isolated section of the AWS Cloud where users can launch AWS resources in a virtual network that they define."
     },
-    // {
-    //     "id"          : 5,
-    //     "quest"    : "Which of the following is an AWS responsibility under the AWS shared responsibility model?",
-    //     "answer1"     : "Configuring third-party applications",
-    //     "answer2"     : "Maintaining physical hardware",
-    //     "answer3"     : "Securing application access and data",
-    //     "answer4"     : "Managing guest operating systems",
-    //     "response"    : "2",
-    //     "explanation" : "Maintaining physical hardware is an AWS responsibility under the AWS shared responsibility model."
-    // },
-    // {
-    //     "id"          : 6,
-    //     "quest"    : "Which component of the AWS global infrastructure does Amazon CloudFront use to ensure low-latency delivery?",
-    //     "answer1"     : "AWS Regions",
-    //     "answer2"     : "Edge locations",
-    //     "answer3"     : "Availability Zones",
-    //     "answer4"     : "Virtual Private Cloud (VPC)",
-    //     "response"    : "2",
-    //     "explanation" : "To deliver content to users with lower latency, Amazon CloudFront uses a global network of points of presence (edge locations and regional edge caches) worldwide."
-    // },
-    // {
-    //     "id"          : 7,
-    //     "quest"    : "How would a system administrator add an additional layer of login security to a user's AWS Management Console?",
-    //     "answer1"     : "Use Amazon Cloud Directory",
-    //     "answer2"     : "Audit AWS Identity and Access Management (IAM) roles",
-    //     "answer3"     : "Enable multi-factor authentication",
-    //     "answer4"     : "Enable AWS CloudTrail",
-    //     "response"    : "3",
-    //     "explanation" : "Multi-factor authentication (MFA) is a simple best practice that adds an extra layer of protection on top of a username and password. With MFA enabled, when a user signs in to an AWS Management Console, they will be prompted for their username and password (the first factor—what they know), as well as for an authentication code from their MFA device (the second factor—what they have). Taken together, these multiple factors provide increased security for AWS account settings and resources."
-    // },
-    // {
-    //     "id"          : 8,
-    //     "quest"    : "Which service can identify the user that made the API call when an Amazon EC2 instance is terminated?",
-    //     "answer1"     : "AWS Trusted Advisor",
-    //     "answer2"     : "AWS CloudTrail",
-    //     "answer3"     : "AWS X-Ray",
-    //     "answer4"     : "AWS Identity and Access Management (AWS IAM)",
-    //     "response"    : "2",
-    //     "explanation" : "AWS CloudTrail helps users enable governance, compliance, and operational and risk auditing of their AWS accounts. Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail. Events include actions taken in the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs and APIs."
-    // },
-    // {
-    //     "id"          : 9,
-    //     "quest"    : "Which service would be used to send alerts based on Amazon CloudWatch alarms?",
-    //     "answer1"     : "Amazon Simple Notification Service (Amazon SNS)",
-    //     "answer2"     : "AWS CloudTrail",
-    //     "answer3"     : "AWS Trusted Advisor",
-    //     "answer4"     : "Amazon Route 53",
-    //     "response"    : "1",
-    //     "explanation" : "Amazon SNS and Amazon CloudWatch are integrated so users can collect, view, and analyze metrics for every active SNS. Once users have configured CloudWatch for Amazon SNS, they can gain better insight into the performance of their Amazon SNS topics, push notifications, and SMS deliveries."
-    // },
-    // {
-    //     "id"          : 10,
-    //     "quest"    : "Where can a user find information about prohibited actions on the AWS infrastructure?",
-    //     "answer1"     : "AWS Trusted Advisor",
-    //     "answer2"     : "AWS Identity and Access Management (IAM)",
-    //     "answer3"     : "AWS Billing Console",
-    //     "answer4"     : "AWS Acceptable Use Policy",
-    //     "response"    : "4",
-    //     "explanation" : "The AWS Acceptable Use Policy provides information regarding prohibited actions on the AWS infrastructure."
-    // },
+    {
+        "id"          : 5,
+        "quest"    : "Which of the following is an AWS responsibility under the AWS shared responsibility model?",
+        "option"      : [
+                        "Configuring third-party applications",
+                        "Maintaining physical hardware",
+                        "Securing application access and data",
+                        "Managing guest operating systems"
+        ],
+        "response"    : 2,
+        "explanation" : "Maintaining physical hardware is an AWS responsibility under the AWS shared responsibility model."
+    },
+    {
+        "id"          : 6,
+        "quest"    : "Which component of the AWS global infrastructure does Amazon CloudFront use to ensure low-latency delivery?",
+        "option"      : [
+                        "AWS Regions",
+                        "Edge locations",
+                        "Availability Zones",
+                        "Virtual Private Cloud (VPC)"
+        ],
+        "response"    : 2,
+        "explanation" : "To deliver content to users with lower latency, Amazon CloudFront uses a global network of points of presence (edge locations and regional edge caches) worldwide."
+    },
+    {
+        "id"          : 7,
+        "quest"    : "How would a system administrator add an additional layer of login security to a user's AWS Management Console?",
+        "option"      : [
+                        "Use Amazon Cloud Directory",
+                        "Audit AWS Identity and Access Management (IAM) roles",
+                        "Enable multi-factor authentication",
+                        "Enable AWS CloudTrail"
+        ],
+        "response"    : 3,
+        "explanation" : "Multi-factor authentication (MFA) is a simple best practice that adds an extra layer of protection on top of a username and password. With MFA enabled, when a user signs in to an AWS Management Console, they will be prompted for their username and password (the first factor—what they know), as well as for an authentication code from their MFA device (the second factor—what they have). Taken together, these multiple factors provide increased security for AWS account settings and resources."
+    },
+    {
+        "id"          : 8,
+        "quest"    : "Which service can identify the user that made the API call when an Amazon EC2 instance is terminated?",
+        "option"      : [
+                        "AWS Trusted Advisor",
+                        "AWS CloudTrail",
+                        "AWS X-Ray",
+                        "AWS Identity and Access Management (AWS IAM)"
+        ],
+        "response"    : 2,
+        "explanation" : "AWS CloudTrail helps users enable governance, compliance, and operational and risk auditing of their AWS accounts. Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail. Events include actions taken in the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs and APIs."
+    },
+    {
+        "id"          : 9,
+        "quest"    : "Which service would be used to send alerts based on Amazon CloudWatch alarms?",
+        "option"      : [
+                        "Amazon Simple Notification Service (Amazon SNS)",
+                        "AWS CloudTrail",
+                        "AWS Trusted Advisor",
+                        "Amazon Route 53"
+        ],
+        "response"    : 1,
+        "explanation" : "Amazon SNS and Amazon CloudWatch are integrated so users can collect, view, and analyze metrics for every active SNS. Once users have configured CloudWatch for Amazon SNS, they can gain better insight into the performance of their Amazon SNS topics, push notifications, and SMS deliveries."
+    },
+    {
+        "id"          : 10,
+        "quest"    : "Where can a user find information about prohibited actions on the AWS infrastructure?",
+        "option"      : [
+                        "AWS Trusted Advisor",
+                        "AWS Identity and Access Management (IAM)",
+                        "AWS Billing Console",
+                        "AWS Acceptable Use Policy"
+        ],
+        "response"    : 4,
+        "explanation" : "The AWS Acceptable Use Policy provides information regarding prohibited actions on the AWS infrastructure."
+    },
 ];
