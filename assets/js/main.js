@@ -2,6 +2,7 @@ let question    = document.getElementById("quiz");
 let n_question  = document.getElementById("question-number");
 let answer_list = Array.from(document.querySelectorAll(".answer"));
 let progress    = document.getElementById("progress");
+let score_element      = document.getElementById("score");
 // console.log(answer_list);
 
 let start = document.getElementById("start");
@@ -29,6 +30,7 @@ function startQuiz(){
         document.getElementById("quiz-app").style.display     = "flex";
         document.getElementById("quiz-info").style.display    = "block";
         document.getElementById("container").style.marginTop  = "80px";
+        score_element.innerText = `Score: ${score}`;
         randomQuestion();
     }
     else{
@@ -58,6 +60,7 @@ function nextQuestion(){
         document.getElementById("quiz-info").style.display    = "none";
     } else {
         question_count++;
+        score_element.innerText = `Score: ${score}`;
         randomQuestion();
     }
 }
@@ -98,13 +101,11 @@ for (let i = 0; i < answer_list.length; i++) {
         if(id == questions[index].response){
             answer_list[i].classList.add("correct");
             score+=10;
-            console.log("score: " + score);
             correct++;
             console.log("correct: " + correct);
         }
         else{
             answer_list[i].classList.add("wrong");
-            console.log("score: " + score);
             wrong++;
             console.log("wrong: " + wrong);
         }
