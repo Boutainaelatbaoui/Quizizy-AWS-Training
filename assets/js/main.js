@@ -8,6 +8,7 @@ let correct_answer     = document.getElementById("correct-answer");
 let user_score         = document.getElementById("user-score");
 let wrong_answer       = document.getElementById("wrong-answer");
 
+
 // console.log(answer_list);
 
 let start = document.getElementById("start");
@@ -31,10 +32,10 @@ function startQuiz(){
     document.getElementById("username").innerText = `Hello ${username}`;
     
     if (username != "") {
-        document.getElementById("first-slide").style.display  = "none";
-        document.getElementById("quiz-app").style.display     = "flex";
-        document.getElementById("quiz-info").style.display    = "block";
-        document.getElementById("container").style.marginTop  = "80px";
+        document.getElementById("first-slide").style.display     = "none";
+        document.getElementById("quiz-app").style.display        = "flex";
+        document.getElementById("quiz-info").style.display       = "block";
+        document.getElementById("container").style.marginTop = "50px";
         score_element.innerText = `Score: ${score}`;
         randomQuestion();
     }
@@ -50,8 +51,8 @@ function nextButton(){
 }
 function nextQuestion(){
     document.getElementById("next").style.display    = "none";
-    document.getElementById("answers").style.marginBottom  = "0";
     document.getElementById("chevron").style.display    = "none";
+    document.getElementById("container").style.marginBottom  = "20px";
 
     for (let i = 0; i < answer_list.length; i++){
         answer_list[i].classList.remove("correct");
@@ -63,6 +64,7 @@ function nextQuestion(){
         document.getElementById("quiz-app").style.display     = "none";
         document.getElementById("quiz-info").style.display    = "none";
         result.style.display = "block";
+        document.getElementById("container").style.marginTop  = "0px";
         correct_answer.innerText = `${correct} correct`
         wrong_answer.innerText = `${wrong} incorrect`
         user_score.innerText = `${score}`
@@ -125,6 +127,10 @@ for (let i = 0; i < answer_list.length; i++) {
     })
     
 }
+
+document.getElementById("play-again").addEventListener("click", () => {
+    window.location.reload();
+})
 
 
 

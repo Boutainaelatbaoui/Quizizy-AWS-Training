@@ -116,18 +116,17 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    // margin-top: 60px;
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     @include breakpoints(tablet){
+        margin-top: 90px !important;
         width: 90%;
-        margin-bottom: 90px;
     }
     @include breakpoints(mobile){
-        margin-top: 100px;
+        margin-top: 90px !important;
         width: 90%;
         height: auto;
-        margin-bottom: 90px;
     }
 }
 .first-slide{
@@ -204,6 +203,7 @@ body{
     @include breakpoints(tablet){
         font-size: 18px;
         margin-left: 40px;
+        margin-bottom: 80px;
         flex-direction: column;
     }
     @include breakpoints(mobile){
@@ -255,7 +255,6 @@ body{
         font-weight: $important-text;
         color: $primary-color;
         box-shadow: $box-shadow;
-
         @include breakpoints(tablet){
             min-width: 450px;
             min-height: 55px;
@@ -361,6 +360,7 @@ body{
 }
 
 .user-score{
+    margin-bottom: 5px;
     @include breakpoints(mobile){
         font-size: 15px;
     }
