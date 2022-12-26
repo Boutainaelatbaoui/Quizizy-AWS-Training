@@ -46,9 +46,16 @@
         <div class="result" id="result">
             <span class="text-logo">Quizizy</span>
             <img class ="done" src="assets/img/flame-success.gif" alt="Quiz Done">
-            <h2 class="congrats">Congrats!!</h2>
-            <h2 class="congrats">You've completed the Quiz</h2>
-            <h2 class="user-score">Your score is : <span id="user-score">4</span> / <span id="total-question">10</span></h2>
+            <div class="congrats">
+                <h2>Congrats!!</h2>
+                <h2>You've completed the Quiz</h2>
+            </div>
+            <h2 class="user-score">Your score is : <span id="user-score"></span> / <span id="total-question">100</span></h2>
+            <h2 class="check-answers">You got <span id="correct-answer"></span> and <span id="wrong-answer"></span>answers.</h2>
+            <div class="result-btn">
+                <button class="feedback-btn" id="feedback"><i class="bi bi-pencil-square result-icon"></i> Feedback</button>
+                <button class="play-again-btn" id="play-again"><i class="bi bi-play-fill result-icon"></i> Play Again</button>
+            </div>
         </div>
     </div>
     <script src="assets/js/data.js"></script>

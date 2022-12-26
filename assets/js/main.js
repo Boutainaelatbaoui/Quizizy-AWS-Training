@@ -1,8 +1,13 @@
-let question    = document.getElementById("quiz");
-let n_question  = document.getElementById("question-number");
-let answer_list = Array.from(document.querySelectorAll(".answer"));
-let progress    = document.getElementById("progress");
+let question           = document.getElementById("quiz");
+let n_question         = document.getElementById("question-number");
+let answer_list        = Array.from(document.querySelectorAll(".answer"));
+let progress           = document.getElementById("progress");
 let score_element      = document.getElementById("score");
+let result             = document.getElementById("result");
+let correct_answer     = document.getElementById("correct-answer");
+let user_score         = document.getElementById("user-score");
+let wrong_answer       = document.getElementById("wrong-answer");
+
 // console.log(answer_list);
 
 let start = document.getElementById("start");
@@ -55,9 +60,12 @@ function nextQuestion(){
     }
 
     if (question_count == questions.length - 1) {
-        document.getElementById("first-slide").style.display  = "block";
         document.getElementById("quiz-app").style.display     = "none";
         document.getElementById("quiz-info").style.display    = "none";
+        result.style.display = "block";
+        correct_answer.innerText = `${correct} correct`
+        wrong_answer.innerText = `${wrong} incorrect`
+        user_score.innerText = `${score}`
     } else {
         question_count++;
         score_element.innerText = `Score: ${score}`;

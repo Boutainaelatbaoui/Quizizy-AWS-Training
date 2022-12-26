@@ -33,6 +33,31 @@ $box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3p
     border-radius: 20px;
 }
 
+@mixin resultButton {
+    @include button;
+    text-align: center;
+    background-color: $aws-clor;
+    box-shadow: $box-shadow;
+    min-height: 60px;
+    font-size: 23px;
+
+    @include breakpoints(tablet){
+        min-height: 59px;
+        font-size: 20px;
+    }
+    @include breakpoints(mobile){
+        min-width: 160px;
+        min-height: 45px;
+        font-size: 18px;
+    }
+
+    &:hover{
+        cursor: pointer;
+        background-color: #f8961e;
+        transition: 0.7s;
+    }
+}
+
 @mixin breakpoints($point){
     @if $point == mobile {
         @media (max-width: 767px) {
@@ -80,13 +105,18 @@ body{
 }
 
 .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 70%;
     margin: 0 auto;
     background-color: $primary-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 150px;
+    align-items: center;
+    margin-top: 60px;
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     @include breakpoints(tablet){
@@ -94,13 +124,14 @@ body{
         margin-bottom: 90px;
     }
     @include breakpoints(mobile){
+        margin-top: 100px;
         width: 90%;
         height: auto;
         margin-bottom: 90px;
     }
 }
 .first-slide{
-    display: none;
+    // display: none;
     margin-top: 10px;
     @include breakpoints(mobile){
         margin-top: 80px;
@@ -315,6 +346,7 @@ body{
 }
 
 .result{
+    display: none;
     color: $text-color;
     font-family: $font-text;
     font-weight: $important-text;
@@ -322,21 +354,48 @@ body{
 }
 
 .congrats{
+    margin-bottom: 10px;
     @include breakpoints(mobile){
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 
 .user-score{
     @include breakpoints(mobile){
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
-#user-score{
+#total-question, #correct-answer, #wrong-answer, #user-score{
     color: $aws-clor;
 }
 
-#total-question{
-    color: $aws-clor;
+.check-answers{
+    margin-bottom: 25px;
+    @include breakpoints(mobile){
+        font-size: 15px;
+    }
+}
+
+.result-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    @include breakpoints(mobile){
+        flex-direction: column;
+    }
+}
+
+.feedback-btn{
+    @include resultButton;
+}
+
+.play-again-btn{
+    @include resultButton;
+}
+
+.result-icon{
+    margin-right: 4px;
 }
