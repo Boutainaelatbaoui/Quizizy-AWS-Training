@@ -1,7 +1,6 @@
 let question           = document.getElementById("quiz");
 let n_question         = document.getElementById("question-number");
 let answer_list        = Array.from(document.querySelectorAll(".answer"));
-let progress           = document.getElementById("progress");
 let score_element      = document.getElementById("score");
 let result             = document.getElementById("result");
 let correct_answer     = document.getElementById("correct-answer");
@@ -14,7 +13,9 @@ let wrong_answer       = document.getElementById("wrong-answer");
 let start = document.getElementById("start");
 let next = document.getElementById("next");
 
+let user_name;
 let array = [];
+let array_quiz = [];
 let index;
 
 let question_count = 0;
@@ -29,6 +30,7 @@ next.addEventListener("click", nextQuestion);
 
 function startQuiz(){
     let username = document.getElementById("username-input").value;
+    user_name    = username;
     document.getElementById("username").innerText = `Hello ${username}`;
     
     if (username != "") {
@@ -65,6 +67,7 @@ function nextQuestion(){
         document.getElementById("quiz-info").style.display    = "none";
         result.style.display = "block";
         document.getElementById("container").style.marginTop  = "0px";
+        document.getElementById("user-name").innerText  = user_name;
         correct_answer.innerText = `${correct} correct`
         wrong_answer.innerText = `${wrong} incorrect`
         user_score.innerText = `${score}`
@@ -76,12 +79,13 @@ function nextQuestion(){
 }
 
 function show() {
+    console.log(index);
     question.innerText = questions[index]['quest'];
     for (let i = 0; i < answer_list.length; i++) {
         answer_list[i].innerText = questions[index]['option'][i];
     }
     count++;
-    progress.innerText = `${count} questions`;
+    document.getElementById("progress").innerText   = `${count} questions`;
     console.log(count);
 }
 
@@ -112,12 +116,16 @@ for (let i = 0; i < answer_list.length; i++) {
             answer_list[i].classList.add("correct");
             score+=10;
             correct++;
-            console.log("correct: " + correct);
+            // console.log("correct: " + correct);
         }
         else{
+            array_quiz.push(questions[index].quest);
+            array_quiz.push(questions[index]['option'][i]);
+            array_quiz.push(questions[index].explanation);
+            
             answer_list[i].classList.add("wrong");
             wrong++;
-            console.log("wrong: " + wrong);
+            // console.log("wrong: " + wrong);
         }
         for (let j = 0; j < answer_list.length; j++) {
             answer_list[j].disabled = true;   
@@ -127,6 +135,12 @@ for (let i = 0; i < answer_list.length; i++) {
     })
     
 }
+
+document.getElementById("feedback").addEventListener("click", () => {
+    for (let i = 0; i < array_quiz.length; i++) {
+        console.log(array_quiz[i]);
+    }
+})
 
 document.getElementById("play-again").addEventListener("click", () => {
     window.location.reload();
