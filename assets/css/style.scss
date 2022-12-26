@@ -95,11 +95,12 @@ body{
     }
     @include breakpoints(mobile){
         width: 90%;
-        height: 80%;
+        height: auto;
         margin-bottom: 90px;
     }
 }
 .first-slide{
+    display: none;
     margin-top: 10px;
     @include breakpoints(mobile){
         margin-top: 80px;
@@ -303,3 +304,39 @@ body{
     margin-bottom: 15px;
 }
 
+.done{
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    @include breakpoints(mobile){
+        max-width: 160px;
+    }
+}
+
+.result{
+    color: $text-color;
+    font-family: $font-text;
+    font-weight: $important-text;
+    text-align: center;
+}
+
+.congrats{
+    @include breakpoints(mobile){
+        font-size: 15px;
+    }
+}
+
+.user-score{
+    @include breakpoints(mobile){
+        font-size: 14px;
+    }
+}
+
+#user-score{
+    color: $aws-clor;
+}
+
+#total-question{
+    color: $aws-clor;
+}
