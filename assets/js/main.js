@@ -19,6 +19,7 @@ let array_quiz = [];
 let index;
 
 let question_count = 0;
+let question_num = 1;
 let score = 0;
 let correct = 0;
 let wrong = 0;
@@ -80,11 +81,12 @@ function nextQuestion(){
 
 function show() {
     console.log(index);
-    question.innerText = questions[index]['quest'];
+    question.innerText = `${question_num}. ${questions[index]['quest']}`;
     for (let i = 0; i < answer_list.length; i++) {
         answer_list[i].innerText = questions[index]['option'][i];
     }
     count++;
+    question_num++;
     document.getElementById("progress").innerText   = `${count} questions`;
     console.log(count);
 }
@@ -121,6 +123,7 @@ for (let i = 0; i < answer_list.length; i++) {
         else{
             array_quiz.push(questions[index].quest);
             array_quiz.push(questions[index]['option'][i]);
+            array_quiz.push(questions[index].option[questions[index].response-1])
             array_quiz.push(questions[index].explanation);
             
             answer_list[i].classList.add("wrong");

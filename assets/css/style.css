@@ -86,7 +86,6 @@ body {
 }
 
 .first-slide {
-  display: none;
   margin-top: 10px;
 }
 @media (max-width: 767px) {
@@ -647,6 +646,10 @@ body {
 
 .result-icon {
   margin-right: 4px;
+}
+
+.feedback-slide {
+  display: none;
 }
 
 .feedback-text {

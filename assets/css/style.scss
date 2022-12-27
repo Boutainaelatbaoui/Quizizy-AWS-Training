@@ -130,7 +130,7 @@ body{
     }
 }
 .first-slide{
-    display: none;
+    // display: none;
     margin-top: 10px;
     @include breakpoints(mobile){
         margin-top: 80px;
@@ -410,6 +410,10 @@ body{
 
 .result-icon{
     margin-right: 4px;
+}
+
+.feedback-slide{
+    display: none;
 }
 
 .feedback-text{
