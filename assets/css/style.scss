@@ -33,6 +33,32 @@ $box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3p
     border-radius: 20px;
 }
 
+@mixin next-btn {
+    @include button;
+    text-align: center;
+    margin: auto;
+    background-color: $aws-clor;
+    box-shadow: $box-shadow;
+    margin-bottom: 70px;
+    min-height: 60px;
+    font-size: 23px;
+
+    @include breakpoints(tablet){
+        min-height: 59px;
+        font-size: 20px;
+    }
+    @include breakpoints(mobile){
+        min-height: 45px;
+        font-size: 18px;
+    }
+
+    &:hover{
+        cursor: pointer;
+        background-color: #f8961e;
+        transition: 0.7s;
+    }
+}
+
 @mixin resultButton {
     @include button;
     text-align: center;
@@ -104,13 +130,19 @@ body{
     font-weight: $important-text;
 }
 
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
 .container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
     width: 70%;
-    margin: 0 auto;
+    margin: auto ;
     background-color: $primary-color;
     display: flex;
     flex-direction: column;
@@ -120,11 +152,9 @@ body{
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     @include breakpoints(tablet){
-        margin-top: 90px !important;
         width: 90%;
     }
     @include breakpoints(mobile){
-        margin-top: 90px !important;
         width: 90%;
         height: auto;
     }
@@ -194,6 +224,7 @@ body{
 
 .quiz-app{
     display: none;
+    width: 70%;
     color: $text-color;
     justify-content: space-between;
     align-self: center;
@@ -245,8 +276,8 @@ body{
 
 @for $i from 1 through 4 {
     #answer-#{$i}{
-        min-width: 500px;
-        min-height: 65px;
+        width: 600px;
+        height: 65px;
         margin-bottom: 15px;
         border-radius: 15px;
         font-weight: $important-text;
@@ -256,13 +287,13 @@ body{
         color: $primary-color;
         box-shadow: $box-shadow;
         @include breakpoints(tablet){
-            min-width: 450px;
-            min-height: 55px;
+            width: 450px;
+            height: 55px;
         }
         @include breakpoints(mobile){
             font-size: 14px;
-            min-width: 250px;
-            min-height: 55px;
+            width: 250px;
+            height: 55px;
         }
 
         &:hover{
@@ -289,30 +320,8 @@ body{
 }
 
 .next-btn{
-    @include button;
+    @include next-btn;
     display: none;
-    text-align: center;
-    margin: auto;
-    background-color: $aws-clor;
-    box-shadow: $box-shadow;
-    margin-bottom: 70px;
-    min-height: 60px;
-    font-size: 23px;
-
-    @include breakpoints(tablet){
-        min-height: 59px;
-        font-size: 20px;
-    }
-    @include breakpoints(mobile){
-        min-height: 45px;
-        font-size: 18px;
-    }
-
-    &:hover{
-        cursor: pointer;
-        background-color: #f8961e;
-        transition: 0.7s;
-    }
 }
 
 #chevron{
@@ -341,14 +350,6 @@ body{
     margin: 0 auto;
     @include breakpoints(mobile){
         max-width: 160px;
-    }
-}
-
-.feedback-gif{
-    max-width: 80px;
-    height: auto;
-    @include breakpoints(mobile){
-        max-width: 40px;
     }
 }
 
@@ -412,6 +413,14 @@ body{
     margin-right: 4px;
 }
 
+.feedback-gif{
+    max-width: 98px;
+    height: auto;
+    @include breakpoints(mobile){
+        max-width: 40px;
+    }
+}
+
 .feedback-slide{
     display: none;
 }
@@ -419,11 +428,75 @@ body{
 .feedback-text{
     color: $text-color;
     font-weight: $important-text;
+    font-size: 48px;
     font-family: $font-text;
+    @include breakpoints(tablet){
+        font-size: 38px;
+    }
+    @include breakpoints(mobile){
+        font-size: 28px;
+    }
 }
 
 .feedback-1{
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
+    gap: 3px;
+}
+
+.feedback-2{
+    display: flex;
+    flex-direction: column;
+    margin: 38px 30px 25px;
+    padding: 8px 10px;
+    background-color: $text-color;
+    font-weight: $important-text;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    color: $tertiary-color;
+    font-family: $font-text;
+    @include breakpoints(tablet){
+        font-size: 18px;
+    }
+    @include breakpoints(mobile){
+        font-size: 15px;
+    }
+}
+
+#incorrect-num, #user-incorrect, #user-correct, #title{
+    color: $secondary-color;
+    font-weight: $important-text;
+}
+
+.user-answer{
+    margin-top: 10px;
+}
+
+#answer-incorrect{
+    color: $wrong-answer;
+}
+
+.correct-answer{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#answer-incorrect{
+    color: $wrong-answer;
+}
+
+#answer-correct{
+    color: $correct-color;
+}
+
+#explanation-text{
+    color: $tertiary-color;
+}
+
+.previous-btn{
+    @include next-btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

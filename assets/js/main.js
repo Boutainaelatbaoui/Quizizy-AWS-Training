@@ -6,6 +6,7 @@ let result             = document.getElementById("result");
 let correct_answer     = document.getElementById("correct-answer");
 let user_score         = document.getElementById("user-score");
 let wrong_answer       = document.getElementById("wrong-answer");
+let feedback           = document.getElementById("feedback-slide1");
 
 
 // console.log(answer_list);
@@ -16,6 +17,7 @@ let next = document.getElementById("next");
 let user_name;
 let array = [];
 let array_quiz = [];
+
 let index;
 
 let question_count = 0;
@@ -113,6 +115,11 @@ for (let i = 0; i < answer_list.length; i++) {
     answer_list[i].addEventListener("click", () => {
 
         let id = answer_list[i].getAttribute("data-id");
+        for (let j = 0; j < answer_list.length; j++) {
+            answer_list[j].disabled = true;   
+        }
+        document.getElementById("next").style.display    = "block";
+        document.getElementById("answers").style.marginBottom  = "15px";
 
         if(id == questions[index].response){
             answer_list[i].classList.add("correct");
@@ -121,32 +128,46 @@ for (let i = 0; i < answer_list.length; i++) {
             // console.log("correct: " + correct);
         }
         else{
-            array_quiz.push(questions[index].quest);
-            array_quiz.push(questions[index]['option'][i]);
-            array_quiz.push(questions[index].option[questions[index].response-1])
-            array_quiz.push(questions[index].explanation);
+            let obj = {};
+            obj["question"]  = questions[index].quest;
+            obj["incorrect"] = questions[index]['option'][i];
+            obj["correct"]   = questions[index].option[questions[index].response-1];
+            obj["detail"]    = questions[index].explanation;
+            console.log(obj);
+            array_quiz.push(obj);
             
             answer_list[i].classList.add("wrong");
             wrong++;
             // console.log("wrong: " + wrong);
         }
-        for (let j = 0; j < answer_list.length; j++) {
-            answer_list[j].disabled = true;   
-        }
-        document.getElementById("next").style.display    = "block";
-        document.getElementById("answers").style.marginBottom  = "15px";
     })
     
 }
 
 document.getElementById("feedback").addEventListener("click", () => {
+
+    result.style.display = "none";
+    result.style.marginTop = "50px";
+    document.getElementById("feedback-slide").style.display = "block";
+    console.log(array_quiz);
     for (let i = 0; i < array_quiz.length; i++) {
-        console.log(array_quiz[i]);
+        feedback.innerHTML += `
+        <div class="feedback-2" id="feedback-2">
+            <h3 class="wrong-answer"><span id="incorrect-num">Question:  </span><span id="incorrect-answer">${array_quiz[i]["question"]}</span></h3>
+            <h3 class="user-answer"><span id="user-incorrect">Your Answer:  </span><span id="answer-incorrect">${array_quiz[i]["incorrect"]}</span></h3>
+            <h3 class="correct-answer"><span id="user-correct">Correct Answer:  </span><span id="answer-correct">${array_quiz[i]["correct"]}</span></h3>
+            <h3 class="explanation"><span id="title">Explanation:  </span><span id="explanation-text">${array_quiz[i]["detail"]}</span></h3>
+        </div>`
     }
 })
 
 document.getElementById("play-again").addEventListener("click", () => {
     window.location.reload();
+})
+
+document.getElementById("previous").addEventListener("click", () => {
+    result.style.display = "block";
+    document.getElementById("feedback-slide").style.display = "none";
 })
 
 
