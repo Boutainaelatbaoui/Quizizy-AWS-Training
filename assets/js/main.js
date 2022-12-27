@@ -40,7 +40,7 @@ function startQuiz(){
         document.getElementById("first-slide").style.display     = "none";
         document.getElementById("quiz-app").style.display        = "flex";
         document.getElementById("quiz-info").style.display       = "block";
-        document.getElementById("container").style.marginTop = "50px";
+        // document.getElementById("container").style.marginTop = "50px";
         score_element.innerText = `Score: ${score}`;
         randomQuestion();
     }
@@ -57,7 +57,7 @@ function nextButton(){
 function nextQuestion(){
     document.getElementById("next").style.display    = "none";
     document.getElementById("chevron").style.display    = "none";
-    document.getElementById("container").style.marginBottom  = "20px";
+    // document.getElementById("container").style.marginBottom  = "100px";
 
     for (let i = 0; i < answer_list.length; i++){
         answer_list[i].classList.remove("correct");
@@ -147,7 +147,6 @@ for (let i = 0; i < answer_list.length; i++) {
 document.getElementById("feedback").addEventListener("click", () => {
 
     result.style.display = "none";
-    result.style.marginTop = "50px";
     document.getElementById("feedback-slide").style.display = "block";
     console.log(array_quiz);
     for (let i = 0; i < array_quiz.length; i++) {

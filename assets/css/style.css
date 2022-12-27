@@ -8,6 +8,10 @@
 
 body {
   background-color: #001d3d;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 .text-logo {
@@ -45,16 +49,9 @@ body {
   font-weight: bold;
 }
 
-body {
-  height: 100vh;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-}
-
 .container {
-  width: 70%;
-  margin: auto;
+  width: 90%;
+  margin: 0 auto;
   background-color: #0f084b;
   display: -webkit-box;
   display: -ms-flexbox;
