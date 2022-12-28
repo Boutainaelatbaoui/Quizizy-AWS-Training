@@ -40,7 +40,7 @@ function startQuiz(){
         document.getElementById("first-slide").style.display     = "none";
         document.getElementById("quiz-app").style.display        = "flex";
         document.getElementById("quiz-info").style.display       = "block";
-        document.getElementById("quiz-app").style.marginBottom = "80px";
+        // document.getElementById("quiz-app").style.marginBottom = "80px";
         score_element.innerText = `Score: ${score}`;
         randomQuestion();
     }
@@ -69,7 +69,7 @@ function nextQuestion(){
         document.getElementById("quiz-app").style.display     = "none";
         document.getElementById("quiz-info").style.display    = "none";
         result.style.display = "block";
-        document.getElementById("container").style.marginTop  = "0px";
+        // document.getElementById("container").style.marginTop  = "0px";
         document.getElementById("user-name").innerText  = user_name;
         correct_answer.innerText = `${correct} correct`
         wrong_answer.innerText = `${wrong} incorrect`
@@ -89,7 +89,8 @@ function show() {
     }
     count++;
     question_num++;
-    document.getElementById("progress").innerText   = `${count} questions`;
+    // document.getElementById("progress").innerText   = `${count} questions`;
+    document.getElementById("progress-bar-full").style.width = `${count*10}%`;
     console.log(count);
 }
 

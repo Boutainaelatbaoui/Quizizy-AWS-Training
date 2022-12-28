@@ -90,7 +90,7 @@ $box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3p
             @content;
         }
     } @else if $point == tablet {
-        @media (min-width: 768px) and (max-width: 991px){
+        @media (min-width: 768px) and (max-width: 1120px){
             @content;
         }
     }
@@ -138,7 +138,7 @@ body{
     // top: 50%;
     // left: 50%;
     // transform: translate(-50%, -50%);
-    width: 95%;
+    width: 80%;
     margin: 0 auto;
     background-color: $primary-color;
     display: flex;
@@ -225,7 +225,7 @@ body{
     color: $text-color;
     justify-content: space-between;
     align-self: center;
-    margin: 25px 150px 0px ;
+    margin: 20px 150px 0px ;
     font-family: $font-text;
     font-weight: $important-text;
     @include breakpoints(tablet){
@@ -264,17 +264,70 @@ body{
     }
 }
 
-.answers{
+.score{
+    padding: 8px 20px;
+    color: $primary-color;
+    background-color: $aws-clor;
+    font-weight: $important-text;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+}
+
+.username{
+    padding: 8px 10px;
+    color: $tertiary-color;
+    background-color: $text-color;
+    font-weight: $important-text;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+}
+
+.progress-bar{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 70px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#progress-bar{
+    width: 120px;
+    height: 35px;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    background-color: $text-color;
+}
+
+#progress-bar-full{
+    height: 35px;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    background-color: $aws-clor;
+    width: 0%;
+}
+
+.answers{
+    // display: flex;
+    // justify-content: space-between;
+    // flex-direction: column;
+    margin: 50px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    grid-template-rows: 90px 90px;
+    @include breakpoints(mobile){
+        grid-template-rows: repeat(4, 65px);
+
+    }
+    @include breakpoints(tablet){
+        grid-template-rows: repeat(4, 65px);
+
+    }
 }
 
 @for $i from 1 through 4 {
     #answer-#{$i}{
-        width: 600px;
-        height: 65px;
+        // width: 600px;
+        // height: 65px;
         margin-bottom: 15px;
         border-radius: 15px;
         font-weight: $important-text;
@@ -284,13 +337,13 @@ body{
         color: $primary-color;
         box-shadow: $box-shadow;
         @include breakpoints(tablet){
-            width: 450px;
-            height: 55px;
+            // width: 450px;
+            // height: 55px;
         }
         @include breakpoints(mobile){
             font-size: 14px;
-            width: 250px;
-            height: 55px;
+            // width: 250px;
+            // height: 55px;
         }
 
         &:hover{
@@ -304,6 +357,22 @@ body{
             margin-right: 25px;
         }
     }
+}
+
+@for $i from 1 through 2{
+    .answers-#{$i}{
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // gap: 5px;
+        // @include breakpoints(tablet){
+        //     flex-direction: column;
+        // }
+        // @include breakpoints(mobile){
+        //     flex-direction: column;
+        // }
+    }
+    
 }
 
 .correct{

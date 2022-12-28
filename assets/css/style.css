@@ -70,7 +70,7 @@ body {
   -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
           box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1120px) {
   .container {
     width: 90%;
   }
@@ -209,11 +209,11 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin: 25px 150px 0px;
+  margin: 20px 150px 0px;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1120px) {
   .quiz-app {
     font-size: 18px;
     margin-left: 40px;
@@ -252,7 +252,7 @@ body {
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
           box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1120px) {
   .quiz-question {
     font-size: 18px;
   }
@@ -263,23 +263,80 @@ body {
   }
 }
 
-.answers {
+.score {
+  padding: 8px 20px;
+  color: #0f084b;
+  background-color: #ffd60a;
+  font-weight: bold;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.username {
+  padding: 8px 10px;
+  color: #001d3d;
+  background-color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.progress-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 70px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+#progress-bar {
+  width: 120px;
+  height: 35px;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: white;
+}
+
+#progress-bar-full {
+  height: 35px;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #ffd60a;
+  width: 0%;
+}
+
+.answers {
+  margin: 50px;
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  -ms-grid-rows: 90px 20px 90px;
+  grid-template-rows: 90px 90px;
+}
+@media (max-width: 767px) {
+  .answers {
+    -ms-grid-rows: (65px)[4];
+    grid-template-rows: repeat(4, 65px);
+  }
+}
+@media (min-width: 768px) and (max-width: 1120px) {
+  .answers {
+    -ms-grid-rows: (65px)[4];
+    grid-template-rows: repeat(4, 65px);
+  }
 }
 
 #answer-1 {
-  width: 600px;
-  height: 65px;
   margin-bottom: 15px;
   border-radius: 15px;
   font-weight: bold;
@@ -290,17 +347,9 @@ body {
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
           box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  #answer-1 {
-    width: 450px;
-    height: 55px;
-  }
-}
 @media (max-width: 767px) {
   #answer-1 {
     font-size: 14px;
-    width: 250px;
-    height: 55px;
   }
 }
 #answer-1:hover {
@@ -315,8 +364,6 @@ body {
 }
 
 #answer-2 {
-  width: 600px;
-  height: 65px;
   margin-bottom: 15px;
   border-radius: 15px;
   font-weight: bold;
@@ -327,17 +374,9 @@ body {
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
           box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  #answer-2 {
-    width: 450px;
-    height: 55px;
-  }
-}
 @media (max-width: 767px) {
   #answer-2 {
     font-size: 14px;
-    width: 250px;
-    height: 55px;
   }
 }
 #answer-2:hover {
@@ -348,8 +387,6 @@ body {
 }
 
 #answer-3 {
-  width: 600px;
-  height: 65px;
   margin-bottom: 15px;
   border-radius: 15px;
   font-weight: bold;
@@ -360,17 +397,9 @@ body {
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
           box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  #answer-3 {
-    width: 450px;
-    height: 55px;
-  }
-}
 @media (max-width: 767px) {
   #answer-3 {
     font-size: 14px;
-    width: 250px;
-    height: 55px;
   }
 }
 #answer-3:hover {
@@ -385,8 +414,6 @@ body {
 }
 
 #answer-4 {
-  width: 600px;
-  height: 65px;
   margin-bottom: 15px;
   border-radius: 15px;
   font-weight: bold;
@@ -397,17 +424,9 @@ body {
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
           box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  #answer-4 {
-    width: 450px;
-    height: 55px;
-  }
-}
 @media (max-width: 767px) {
   #answer-4 {
     font-size: 14px;
-    width: 250px;
-    height: 55px;
   }
 }
 #answer-4:hover {
@@ -445,7 +464,7 @@ body {
   font-size: 23px;
   display: none;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1120px) {
   .next-btn {
     min-height: 59px;
     font-size: 20px;
@@ -577,7 +596,7 @@ body {
   min-height: 60px;
   font-size: 23px;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1120px) {
   .feedback-btn {
     min-height: 59px;
     font-size: 20px;
@@ -612,7 +631,7 @@ body {
   min-height: 60px;
   font-size: 23px;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1120px) {
   .play-again-btn {
     min-height: 59px;
     font-size: 20px;
@@ -656,7 +675,7 @@ body {
   font-size: 48px;
   font-family: "Poppins", sans-serif;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1120px) {
   .feedback-text {
     font-size: 38px;
   }
@@ -696,7 +715,7 @@ body {
   color: #001d3d;
   font-family: "Poppins", sans-serif;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1120px) {
   .feedback-2 {
     font-size: 18px;
   }
@@ -763,7 +782,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1120px) {
   .previous-btn {
     min-height: 59px;
     font-size: 20px;
@@ -780,4 +799,8 @@ body {
   background-color: #f8961e;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+}
+
+.no-feedback {
+  text-align: center;
 }
