@@ -40,7 +40,7 @@ function startQuiz(){
         document.getElementById("first-slide").style.display     = "none";
         document.getElementById("quiz-app").style.display        = "flex";
         document.getElementById("quiz-info").style.display       = "block";
-        // document.getElementById("container").style.marginTop = "50px";
+        document.getElementById("quiz-app").style.marginBottom = "80px";
         score_element.innerText = `Score: ${score}`;
         randomQuestion();
     }
@@ -148,7 +148,13 @@ document.getElementById("feedback").addEventListener("click", () => {
 
     result.style.display = "none";
     document.getElementById("feedback-slide").style.display = "block";
-    console.log(array_quiz);
+    // console.log(array_quiz);
+    if (array_quiz.length == 0) {
+        feedback.innerHTML += `
+        <div class="feedback-2" id="feedback-2">
+            <h2 class="no-feedback">There is no feedback. All your answers are correct.</h2>
+        </div>`
+    }
     for (let i = 0; i < array_quiz.length; i++) {
         feedback.innerHTML += `
         <div class="feedback-2" id="feedback-2">
